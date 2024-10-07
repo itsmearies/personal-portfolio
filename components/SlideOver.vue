@@ -1,0 +1,26 @@
+<template>
+  <div>
+    <UButton class="md:hidden" color="white" variant="ghost" @click="isOpen = true" >
+        <UIcon name="heroicons:list-bullet" class="icon-size"/>
+    </UButton>
+    
+    <USlideover v-model="isOpen" side="left">
+      <UCard class="flex flex-col flex-1">
+        <template #header>
+          <div class="flex items-center justify-between">
+            <h3 class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
+              Slideover
+            </h3>
+            <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />
+          </div>
+        </template>
+      </UCard>
+    </USlideover>
+  </div>
+</template>
+
+<script setup lang="ts">
+    const isOpen = ref(false)
+</script>
+
+

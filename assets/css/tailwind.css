@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+@layer components {
+    /* .btn {
+        @apply bg-blue-500 text-white rounded-lg p-2;
+    } */
+
+    .icon-size {
+        @apply w-8 h-8;
+    }
+
+    input.relative, textarea.relative {
+        @apply dark:bg-gray-950
+    }
+
+
+    
+}
