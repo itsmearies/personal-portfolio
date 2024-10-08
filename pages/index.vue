@@ -2,8 +2,8 @@
     <div class="flex flex-col gap-[10rem]">
         <Home id="home"></Home>   
         <About id="about"></About>
-        <Project id="projects"></Project>
         <Skills id="skills"></Skills>
+        <Project id="projects"></Project>
         <Contact id="contact"></Contact>
     </div>
 </template>
