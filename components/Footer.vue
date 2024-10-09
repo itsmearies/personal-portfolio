@@ -21,9 +21,11 @@
                 <div>
                     <div class="text-xl font-bold">Nav Links</div>
                     <ul class="flex flex-col gap-2 mt-2">
-                        <li v-for="(link, index) in navLinks" :key="index" class="flex items-center gap-2 text-md">  
-                            {{ link.label }}
-                        </li>
+                        <li v-for="(link, index) in navLinks" :key="index" class="flex items-center gap-2 text-md capitalize">  
+                            <ULink :to="`#${link.label}`">
+                                {{ link.label }}
+                            </ULink>
+                        </li>    
                     </ul>
                 </div>
 
@@ -31,8 +33,8 @@
 
                 <div class="flex flex-col justify-center items-center">
                     <div class="mb-5">
-                        <ul class="flex gap-2 mt-2">
-                            <li v-for="(link, index) in socialLinks" :key="index" class="flex items-center gap-2 text-md">
+                        <ul class="flex gap-5 mt-2">
+                            <li v-for="(link, index) in socialLinks" :key="index">
                                 <NuxtLink :to="link.to" target="_blank">
                                     <UTooltip :text="link. label" class="mt-2">
                                         <UIcon :name="link.icon" class="text-2xl" />
