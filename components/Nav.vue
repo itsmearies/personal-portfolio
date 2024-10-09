@@ -7,11 +7,12 @@
                 <div class="hidden md:flex nav-links">
                     <ul class="flex items-center gap-10">
                         <li v-for="(link, index) in navLinks" :key="index" class="">
-                            <ULink :to="`#${link.text}`"  @click="setActiveLink(link.text)">
-                                <UTooltip :text="link.text" class="mt-2">
+                            <ULink :to="`#${link.label}`" @click="setActiveLink(link.label)">
+                                <UTooltip :text="link.label" class="mt-2">
                                     <UIcon 
                                         :name="link.icon" 
-                                        :class="['icon-size', { 'active': activeLink === link.text }]" />
+                                        :class="['icon-size', { 'active': activeLink === link.label }]" 
+                                    />
                                 </UTooltip>   
                             </ULink> 
                         </li>      
@@ -29,28 +30,7 @@
 </template>
 
 <script setup>
-    const navLinks = ref([
-        {
-            text: 'home',
-            icon: 'heroicons:home'
-        },
-        {
-            text: 'about',
-            icon: 'heroicons:information-circle'
-        },
-        {
-            text: 'skills',
-            icon: 'heroicons:academic-cap'
-        },
-        {
-            text: 'projects',
-            icon: 'heroicons:clipboard-document'
-        },
-        {
-            text: 'contact',
-            icon: 'heroicons:phone'
-        },
-    ]);
+    const { navLinks } = useNavLinks();
 
     // Reactive property to store the active link
     const activeLink = ref('home'); // Default active link

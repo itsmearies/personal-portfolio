@@ -1,26 +1,88 @@
 <template>
   <div>
-    <UButton class="md:hidden" color="white" variant="ghost" @click="isOpen = true" >
-        <UIcon name="heroicons:list-bullet" class="icon-size"/>
+    <UButton class="md:hidden" color="gray" variant="ghost" @click="isOpen = true">
+      <UIcon name="heroicons:list-bullet" class="icon-size"/>
     </UButton>
     
     <USlideover v-model="isOpen" side="left">
       <UCard class="flex flex-col flex-1">
         <template #header>
           <div class="flex items-center justify-between">
-            <h3 class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
-              Slideover
-            </h3>
-            <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="isOpen = false" />
+            <div class="nav-logo text-3xl italic">Jomel Malvar</div>
+            <UButton color="gray" variant="ghost" icon="heroicons:x-mark" class="icon-size" @click="isOpen = false" />
           </div>
         </template>
+        <Placeholder class="h-full" />
+
+        <div class="">
+          <ul class="flex flex-col gap-2">
+            <li v-for="(link, index) in navLinks" :key="index">
+              <ULink :to="`#${link.label}`" @click="setActiveLink(link.label)" class="flex items-center gap-3">
+                <div>
+                  <UIcon 
+                    :name="link.icon" 
+                    :class="['icon-size', { 'active': activeLink === link.label }]" 
+                  />
+                </div>
+                <div class="capitalize text-lg">
+                  {{ link.label }}
+                </div>
+              </ULink> 
+            </li>      
+          </ul>
+        </div>
       </UCard>
     </USlideover>
-  </div>
+  </div>  
 </template>
 
-<script setup lang="ts">
-    const isOpen = ref(false)
+<script setup>
+    const isOpen = ref(false);
+
+    const navLinks = ref([
+      {
+        label: 'home',
+        icon: 'heroicons:home',
+        to: '#home'
+      },
+      {
+        label: 'about',
+        icon: 'heroicons:information-circle',
+        to: '#about'
+        
+      },
+      {
+        label: 'skills',
+        icon: 'heroicons:academic-cap',
+        to: '#skills'
+      },
+      {
+        label: 'projects',
+        icon: 'heroicons:clipboard-document',
+        to: '#projects'
+      },
+      {
+        label: 'contact',
+        icon: 'heroicons:phone',
+        to: '#contact'
+      },
+    ]);
+
+    const activeLink = ref('home'); // Default active link
+
+    // Function to set the active link
+    const setActiveLink = (linkText) => {
+        activeLink.value = linkText;
+    };
 </script>
+
+<style scoped>
+  .nav-logo{
+      font-family: "Pacifico", cursive;
+  }  
+  .active{
+    color: #22C55E;
+  }
+</style>
 
 

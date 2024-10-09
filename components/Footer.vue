@@ -9,7 +9,7 @@
                             <li v-for="(link, index) in info" :key="index" class="flex items-center gap-2 text-md">
                                 <NuxtLink to="">
                                     <div class="flex items-center gap-2">
-                                        <UIcon :name="link.icon" class="text-2xl" />
+                                        <UAvatar :icon="link.icon" size="md" class="dark:bg-gray-950" />
                                         {{ link.label }}
                                     </div>
                                 </NuxtLink> 
@@ -21,24 +21,26 @@
                 <div>
                     <div class="text-xl font-bold">Nav Links</div>
                     <ul class="flex flex-col gap-2 mt-2">
-                        <li v-for="(link, index) in socialLinks" :key="index" class="flex items-center gap-2 text-md">  
+                        <li v-for="(link, index) in navLinks" :key="index" class="flex items-center gap-2 text-md">  
                             {{ link.label }}
                         </li>
                     </ul>
                 </div>
 
-                <!-- <div>
-                    <div class="text-xl font-bold">Social Links</div>
-                    <ul class="flex flex-col gap-2 mt-2">
-                        <li v-for="(link, index) in socialLinks" :key="index" class="flex items-center gap-2 text-md">
-                            {{ link.label }}
-                        </li>
-                    </ul>
-                </div> -->
-                
                 <UDivider :avatar="{ src: avatar }" orientation="vertical" />
 
-                <div class="flex justify-center items-center">
+                <div class="flex flex-col justify-center items-center">
+                    <div class="mb-5">
+                        <ul class="flex gap-2 mt-2">
+                            <li v-for="(link, index) in socialLinks" :key="index" class="flex items-center gap-2 text-md">
+                                <NuxtLink :to="link.to" target="_blank">
+                                    <UTooltip :text="link. label" class="mt-2">
+                                        <UIcon :name="link.icon" class="text-2xl" />
+                                    </UTooltip>   
+                                </NuxtLink> 
+                            </li>
+                        </ul>
+                    </div>
                     Copyright&#169;{{ new Date().getFullYear() }}; Designed By Me
                 </div>
             </div>  
@@ -48,6 +50,9 @@
 
 <script setup>
     import avatar from './assets/images/avatar.jpg';
+
+    const { socialLinks } = useSocialLinks();
+    const { navLinks } = useNavLinks();
 
     const info = ref([
         {
@@ -63,31 +68,6 @@
             icon: 'heroicons:envelope'
         },  
     ]);
-
-    const socialLinks = ref([
-        {
-            label: 'Home',
-            icon: 'heroicons:home'
-        },
-        {
-            label: 'About',
-            icon: 'heroicons:information-circle'
-        },
-        {
-            label: 'Skills',
-            icon: 'heroicons:academic-cap'
-        },
-        {
-            label: 'Projects',
-            icon: 'heroicons:home'
-        },
-        {
-            label: 'Contact',
-            icon: 'heroicons:information-circle'
-        },
-        
-    ]);
-    
 </script>
 
 <style scoped>

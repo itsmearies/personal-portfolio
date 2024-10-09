@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen">
+    <div class="min-h-screen overflow-hidden">
         <nav>
            <Nav></Nav>
         </nav>

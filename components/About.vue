@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="overflow-hidden">
+        <div>
             <div v-for="(info, index) in about" :key="index" class="grid md:grid-cols-2 mt-20 gap-20">
                 <div data-aos="fade-left" ata-aos-easing="linear" data-aos-duration="1000">
                     <img :src=info.image class="max-w-100" />
@@ -43,9 +43,9 @@
             image: image,
             title: 'About Me',
             subTitle: 'Front-End Developer',
-            text: `Hello!, I am a recent graduate with a Bachelor of Science in Information Technology, passionate in web developemnt.
+            text: `Hello!, I am a recent graduate with a Bachelor of Science in Information Technology, passionate in web development.
                     I love building a responsive, functional, and modern websites that deliver an excellent user experience. 
-                    I would like to learn new technologies and continuously to develop my skills.`            
+                    I like to learn new technologies and continuously to develop my skills.`            
         }
     ];
 
