@@ -68,7 +68,7 @@
                 {text: 'Nuxt', icon: 'logos:nuxt-icon'},
                 {text: 'Tailwind', icon: 'logos:tailwindcss-icon'},
             ],
-            url: 'https://weather-app-flame-gamma-14.vercel.app/',
+            url: 'https://personal-portfolio-two-green.vercel.app/',
             target: '_blank'
         },
     ])
