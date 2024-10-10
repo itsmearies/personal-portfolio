@@ -6,8 +6,8 @@
                 <div v-for="(project, index) in projects" :key="index">
                     <div class="card shadow-lg rounded-md dark:bg-gray-950">
                         <div class="flex flex-col gap-3">
-                            <div class="relative card-url border-b">
-                                <img :src="project.thumbnail" class="w-full h-auto rounded-t-md "/>
+                            <div class="relative card-url">
+                                <img :src="project.thumbnail" class="w-full h-[300px] rounded-t-md object-contain"/>
                                 <a :href="project.url" :target="project.target" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-t-md">
                                     <span class="text-white text-center text-md font-semibold">{{  project.url }}</span>
                                 </a>
@@ -15,11 +15,11 @@
                             <div class="content leading-6 p-4">
                                 <div class="card-title text-3xl font-bold">{{ project.title }}</div>
                                 <div class="card-sub-title mt-2 flex flex-col">
-                                    <span v-if="expandedCards[index]">{{ project.subTitle }}</span>
-                                    <span v-else class="line-clamp-2">{{ project.subTitle }}</span>
+                                    <span v-if="expandedCards[index]">{{ project.description }}</span>
+                                    <span v-else class="line-clamp-2">{{ project.description }}</span>
                                     <button
                                         @click="toggleReadMore(index)"
-                                        class="text-blue-500 underline mt-2 text-start"
+                                        class="text-green-500 underline mt-2 text-start"
                                     >
                                         {{ expandedCards[index] ? 'Read less' : 'Read more' }}
                                     </button>
@@ -51,7 +51,7 @@
         {
             thumbnail: weatherApp,
             title: 'Weather App',
-            subTitle: `A weather forecasting application built with Vue 3 and Vuetify. 
+            description: `A weather forecasting application built with Vue 3 and Vuetify. 
                     The app uses WeatherApi to fetch real-time weather data, providing users with accurate and up-to-date information.`,
             skills: [
                 {text: 'Vue', icon: 'logos:vue'},
@@ -63,7 +63,7 @@
         {
             thumbnail: portfolioApp,
             title: 'My Portfolio',
-            subTitle: `A personal portfolio website built with Nuxt and Tailwind CSS, showcasing my projects and skills.`,
+            description: `A personal portfolio website built with Nuxt and Tailwind CSS, showcasing my projects and skills.`,
             skills: [
                 {text: 'Nuxt', icon: 'logos:nuxt-icon'},
                 {text: 'Tailwind', icon: 'logos:tailwindcss-icon'},
