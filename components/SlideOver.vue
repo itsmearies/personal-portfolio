@@ -12,7 +12,6 @@
             <UButton color="gray" variant="ghost" icon="heroicons:x-mark" class="icon-size" @click="isOpen = false" />
           </div>
         </template>
-        <Placeholder class="h-full" />
 
         <div class="">
           <ul class="flex flex-col gap-2">

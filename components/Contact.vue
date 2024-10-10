@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="">
+        <div>
             <div data-aos="fade-up" ata-aos-easing="linear" data-aos-duration="1000">
                 <div class="text-4xl font-bold text-center">Contact</div>
                 <div class="text-lg text-center tracking-wide mt-2">Let's talk about something cool together.</div>
@@ -10,7 +10,7 @@
                     <img :src=avatar class="rounded-full max-w-100" />
                 </div>
                 <div class="flex justify-center items-center" data-aos="fade-right" ata-aos-easing="linear" data-aos-duration="1000">
-                    <UForm class="space-y-4 w-full md:w-[550px]" @submit.prevent="sendEmail">
+                    <UForm class="space-y-4 w-full md:w-[550px]" :state="dataForm" @submit.prevent="sendEmail">
                         <UFormGroup label="Name" name="name">
                             <UInput type="text" icon="heroicons:user" size="xl" placeholder="John Doe" v-model="dataForm.name" required/>
                         </UFormGroup>
