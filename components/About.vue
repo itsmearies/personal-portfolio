@@ -8,13 +8,13 @@
                 <div class="text-center md:text-start" data-aos="fade-right" ata-aos-easing="linear" data-aos-duration="1000">
                     <div class="space-y-7">
                         <div class="font-bold text-6xl">{{ info.title }}</div>
-                        <div class="text-4xl capitalize">{{ info.subTitle }}</div>
+                        <div class="text-4xl capitalize text-green-500">{{ info.subTitle }}</div>
                     </div>
                     <div class="mt-10">
                         <div class="leading-loose text-lg text-justify">
                             {{ info.text }}
                         </div>
-                    </div>
+                    </div>  
                     <div class="mt-10">
                         <ul class="flex flex-col gap-4 mt-2">
                             <li v-for="(link, index) in sample" :key="index" class="flex items-center gap-2 text-md">
