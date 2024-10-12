@@ -5,7 +5,7 @@
         <Skills id="skills"></Skills>
         <Project id="projects"></Project>
         <Contact id="contact"></Contact>
-        <UNotifications />
+        <UNotifications color="blue"/>
     </div>
 </template>
 

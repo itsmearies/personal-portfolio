@@ -57,7 +57,7 @@
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 isLoading.value = false; // Set loading to false on success
-                toast.add({ title: 'Message sent successfully!', type: 'success'});  
+                toast.add({ title: 'Message sent successfully!', color: 'blue', type: 'success'});  
 
                 // Clear the form 
                 dataForm.value.name = '';
@@ -67,7 +67,7 @@
             .catch((error) => {
                 console.log('FAILED...', error);
                 isLoading.value = false; // Set loading to false on failure
-                toast.add({ title: 'Failed to send.', type: 'error'});
+                toast.add({ title: 'Failed to send.', color: 'blue', type: 'error'});
             });
     };
 </script>
