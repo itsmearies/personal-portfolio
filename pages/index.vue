@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col gap-[10rem] ">
+    <div class="flex flex-col gap-[10rem]">
         <Home id="home"></Home>   
         <About id="about"></About>
         <Skills id="skills"></Skills>
@@ -13,6 +13,6 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

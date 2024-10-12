@@ -4,7 +4,7 @@
            <Nav></Nav>
         </nav>
 
-        <main class="container mx-auto pt-[83px] px-5 md:px-20">
+        <main> 
             <slot />  
         </main> 
 
@@ -18,6 +18,6 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

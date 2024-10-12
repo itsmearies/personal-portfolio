@@ -9,18 +9,18 @@
         <template #header>
           <div class="flex items-center justify-between">
             <div class="nav-logo text-3xl italic">Jomel Malvar</div>
-            <UButton color="gray" variant="ghost" icon="heroicons:x-mark" class="icon-size" @click="isOpen = false" />
+            <UButton color="gray" variant="ghost" icon="heroicons:x-mark" class="icon-size" @click="isOpen = false"/>
           </div>
         </template>
 
         <div class="">
           <ul class="flex flex-col gap-2">
-            <li v-for="(link, index) in navLinks" :key="index">
+            <li v-for="(link, index) in navLinks" :key="index" @click="isOpen = false">
               <ULink :to="`#${link.label}`" @click="setActiveLink(link.label)" class="flex items-center gap-3">
                 <div>
                   <UIcon 
                     :name="link.icon" 
-                    :class="['icon-size', { 'active': activeLink === link.label }]" 
+                    :class="['icon-size', { 'primary-color': activeLink === link.label }]" 
                   />
                 </div>
                 <div class="capitalize text-lg">
@@ -79,9 +79,6 @@
   .nav-logo{
       font-family: "Pacifico", cursive;
   }  
-  .active{
-    color: #22C55E;
-  }
 </style>
 
 

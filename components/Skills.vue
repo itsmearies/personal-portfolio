@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <div data-aos="fade-up" data-aos-anchor-placement="top-center" ata-aos-easing="linear" data-aos-duration="1000">
+    <div class="section" data-aos="fade-up" data-aos-anchor-placement="top-center" ata-aos-easing="linear" data-aos-duration="1000">
+        <div>
             <div class="text-4xl font-bold text-center">Skills</div>
             <div class="mt-16 md:px-[6rem]">
                 <ul class="flex justify-center flex-wrap gap-5 gap-y-[3rem]">
                     <li v-for="(skill, index) in skills" :key="index">
                         <UTooltip :text="skill.text" class="mt-2">
-                            <UIcon :name="skill.icon" class="text-[4.5rem]" />
+                            <UIcon :name="skill.icon" class="text-[4.5rem]"/>
                         </UTooltip>  
                     </li>
                 </ul>
@@ -34,6 +34,6 @@
     ])
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

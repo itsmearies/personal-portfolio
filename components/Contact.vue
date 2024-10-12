@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>
+        <div class="section">
             <div data-aos="fade-up" ata-aos-easing="linear" data-aos-duration="1000">
                 <div class="text-4xl font-bold text-center">Contact</div>
                 <div class="text-lg text-center tracking-wide mt-2">Let's talk about something cool together.</div>
@@ -24,7 +24,7 @@
                         </UFormGroup>
 
                         <UFormGroup class="flex justify-end">
-                            <UButton type="submit" color="green" size="xl" :loading="isLoading">
+                            <UButton type="submit" size="xl" :loading="isLoading" class="primary-color dark:text-white">
                                 Submit 
                             </UButton>
                         </UFormGroup> 
@@ -57,7 +57,12 @@
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 isLoading.value = false; // Set loading to false on success
-                toast.add({ title: 'Message sent successfully!', type: 'success'});
+                toast.add({ title: 'Message sent successfully!', type: 'success'});  
+
+                // Clear the form 
+                dataForm.value.name = '';
+                dataForm.value.email = '';
+                dataForm.value.message = '';
             })
             .catch((error) => {
                 console.log('FAILED...', error);

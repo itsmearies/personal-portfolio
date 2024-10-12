@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>
+        <div class="section">
             <div v-for="(info, index) in about" :key="index" class="grid md:grid-cols-2 mt-20 gap-20">
                 <div data-aos="fade-left" ata-aos-easing="linear" data-aos-duration="1000">
                     <img :src=info.image class="max-w-100" />
@@ -8,7 +8,7 @@
                 <div class="text-center md:text-start" data-aos="fade-right" ata-aos-easing="linear" data-aos-duration="1000">
                     <div class="space-y-7">
                         <div class="font-bold text-6xl">{{ info.title }}</div>
-                        <div class="text-4xl capitalize text-green-500">{{ info.subTitle }}</div>
+                        <div class="text-4xl capitalize font-bold text-color">{{ info.subTitle }}</div>
                     </div>
                     <div class="mt-10">
                         <div class="leading-loose text-lg text-justify">
@@ -30,8 +30,6 @@
                 </div>
             </div> 
         </div>
-        
-
     </div>
 </template>
 
@@ -66,6 +64,6 @@
     ];
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
