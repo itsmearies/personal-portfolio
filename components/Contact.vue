@@ -1,15 +1,15 @@
 <template>
     <div>
         <div class="section">
-            <div data-aos="fade-up" ata-aos-easing="linear" data-aos-duration="1000">
+            <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
                 <div class="text-4xl font-bold text-center">Contact</div>
                 <div class="text-lg text-center tracking-wide mt-2">Let's talk about something cool together.</div>
             </div>
             <div class="grid md:grid-cols-2 mt-20">
-                <div class="flex justify-center items-center" data-aos="fade-left" ata-aos-easing="linear" data-aos-duration="1000">
-                    <img :src=avatar class="rounded-full max-w-100" />
+                <div class="flex justify-center items-center" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+                    <img :src="avatar" class="rounded-full max-w-100" />
                 </div>
-                <div class="flex justify-center items-center" data-aos="fade-right" ata-aos-easing="linear" data-aos-duration="1000">
+                <div class="flex justify-center items-center" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
                     <UForm class="space-y-4 w-full md:w-[550px]" :state="dataForm" @submit.prevent="sendEmail">
                         <UFormGroup label="Name" name="name">
                             <UInput type="text" icon="heroicons:user" size="xl" placeholder="John Doe" v-model="dataForm.name" required/>
@@ -37,8 +37,8 @@
 
 <script setup>
     import avatar from './assets/images/message.svg';
-    import emailjs from '@emailjs/browser';
 
+    const mail = useMail();
     const toast = useToast();
 
     const isLoading = ref(false);
@@ -49,29 +49,25 @@
         message: ''
     });
 
-    const sendEmail = () => {
-        // Set loading state to true before sending the email
+    const sendEmail = async () => {
         isLoading.value = true;
-
-        emailjs.send('service_hfxk05s', 'template_zl0toxw', dataForm.value, 'Fu01RPiEFPMbYeSpV')
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                isLoading.value = false; // Set loading to false on success
-                toast.add({ title: 'Message sent successfully!', color: 'blue', type: 'success'});  
-
-                // Clear the form 
-                dataForm.value.name = '';
-                dataForm.value.email = '';
-                dataForm.value.message = '';
-            })
-            .catch((error) => {
-                console.log('FAILED...', error);
-                isLoading.value = false; // Set loading to false on failure
-                toast.add({ title: 'Failed to send.', color: 'blue', type: 'error'});
+        try {
+            await mail.send({
+            subject: `Message from ${dataForm.value.name}`,
+            html: `
+                <div>Name: ${dataForm.value.name}</div>
+                <div>Email: ${dataForm.value.email}</div>
+                <div>Message: ${dataForm.value.message}</div>
+            `, 
             });
+            isLoading.value = false;
+            toast.add({ title: 'Message sent successfully!', color: 'blue', type: 'success'});  
+            dataForm.value = { name: '', email: '', message: '' }; // Reset form
+        } catch (error) {
+            console.error('Email error:', error);
+            isLoading.value = true;
+            toast.add({ title: 'Failed to send.', color: 'blue', type: 'error'});
+        } 
     };
 </script>
 
-<style lang="" scoped>
-
-</style>
