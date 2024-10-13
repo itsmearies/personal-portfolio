@@ -66,7 +66,7 @@
                 {text: 'Nuxt', icon: 'logos:nuxt-icon'},
                 {text: 'Tailwind', icon: 'logos:tailwindcss-icon'},
             ],
-            url: 'https://personal-portfolio-two-green.vercel.app/',
+            url: 'https://jomel-malvar.vercel.app/',
             target: '_blank',
             expanded: false 
         },  
