@@ -1,6 +1,6 @@
 <template>
     <div class="bg-[url('@/assets/images/wave.svg')] bg-no-repeat bg-cover">
-        <div class="mt-[10rem] pt-[17rem] pb-[5rem] px-5 md:px-20">
+        <div class="mt-[10rem] pt-[17rem] pb-[3rem] md:pb-[5rem] px-5 md:px-20">
             <div class="flex flex-col md:flex-row justify-between gap-10 container mx-auto">
                 <div>
                     <div class="nav-logo text-2xl italic">Jomel Malvar</div>
@@ -28,8 +28,6 @@
                         </li>    
                     </ul>
                 </div>
-
-                <UDivider :avatar="{ src: avatar }" orientation="vertical" />
 
                 <div class="flex flex-col justify-center items-center">
                     <div class="mb-5">
