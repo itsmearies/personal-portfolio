@@ -6,7 +6,7 @@
                     order-2 text-center md:text-start" 
                     data-aos="fade-up" ata-aos-easing="linear"
                 >
-                    <div class="title font-bold text-6xl">Hi, I'm Jomel Malvar1</div>
+                    <div class="title font-bold text-6xl">Hi, I'm Jomel Malvar</div>
                     <div class="sub-title text-4xl capitalize">Aspiring Front-End Developer</div>
                     <div class="text-lg">
                         Let's continue our journey together and bring the experience to success.
