@@ -1,5 +1,5 @@
 <template>
-    <div class="section">
+    <div class="section pt-0">
         <div>
             <div class="md:px-[10rem]">
                 <ul class="flex flex-col gap-[5rem]">
