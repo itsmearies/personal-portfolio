@@ -8,7 +8,7 @@
                 <div class="text-center md:text-start" data-aos="fade-right" ata-aos-easing="linear" data-aos-duration="1000">
                     <div class="space-y-7">
                         <div class="font-bold text-6xl">{{ info.title }}</div>
-                        <div class="text-4xl capitalize font-bold text-color">{{ info.subTitle }}</div>
+                        <!-- <div class="text-4xl capitalize font-bold text-color">{{ info.subTitle }}</div> -->
                     </div>
                     <div class="mt-10">
                         <div class="leading-loose text-lg text-justify">
@@ -40,7 +40,6 @@
         {
             image: image,
             title: 'About Me',
-            subTitle: 'Front-End Developer',
             text: `Hello!, I am a recent graduate with a Bachelor of Science in Information Technology, passionate in web development.
                     I love building a responsive, functional, and modern websites that deliver an excellent user experience. 
                     I like to learn new technologies and continuously to develop my skills.`            

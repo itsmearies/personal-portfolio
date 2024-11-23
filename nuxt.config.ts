@@ -1,27 +1,22 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: [
-    '@nuxt/ui',
-    '@nuxtjs/tailwindcss',
-    'nuxt-aos',
-    [
-      'nuxt-mail',
-      {
-        message: {
-          to: process.env.SMTP_USER,
+  modules: ['@nuxt/ui', '@nuxtjs/tailwindcss', 'nuxt-aos', [
+    'nuxt-mail', 
+    {
+      message: {
+        to: process.env.SMTP_USER,
+      },
+      smtp: {
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,  
         },
-        smtp: {
-          host: process.env.SMTP_HOST,
-          port: process.env.SMTP_PORT,
-          auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS,  
-          },
-        },
-      }
-    ],
-  ],
+      },
+    }
+  ], 'nuxt-marquee'],
   app: {
     head: {
       title: 'Personal Portfolio',

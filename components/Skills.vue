@@ -1,14 +1,18 @@
 <template>
-    <div class="section" data-aos="fade-up" data-aos-anchor-placement="top-center" ata-aos-easing="linear" data-aos-duration="1000">
+    <div class="section">
         <div>
-            <div class="text-4xl font-bold text-center">Skills</div>
-            <div class="mt-16 md:px-[6rem]">
-                <ul class="flex justify-center flex-wrap gap-5 gap-y-[3rem]">
-                    <li v-for="(skill, index) in skills" :key="index">
-                        <UTooltip :text="skill.text" class="mt-2">
-                            <UIcon :name="skill.icon" class="text-[4.5rem]"/>
-                        </UTooltip>  
-                    </li>
+            <div class="md:px-[10rem]">
+                <ul class="flex flex-col gap-[5rem]">
+                    <NuxtMarquee direction="right" speed=30>
+                        <li class="mx-8" v-for="(skill, index) in primarySkills" :key="index">
+                            <UIcon :name="skill.icon" class="text-[4rem]"/>
+                        </li>
+                    </NuxtMarquee>
+                    <NuxtMarquee direction="left" speed=30>
+                        <li class="mx-8" v-for="(skill, index) in secondarySkills" :key="index">
+                            <UIcon :name="skill.icon" class="text-[4rem]"/>
+                        </li>
+                    </NuxtMarquee>
                 </ul>
             </div>
         </div>
@@ -16,7 +20,7 @@
 </template>
 
 <script setup>
-    const skills = ([
+    const primarySkills = [
         {text: 'HTML', icon: 'vscode-icons:file-type-html'},
         {text: 'CSS', icon: 'vscode-icons:file-type-css'},
         {text: 'Javascript', icon: 'logos:javascript'},
@@ -25,13 +29,19 @@
         {text: 'Vue', icon: 'logos:vue'},
         {text: 'Nuxt', icon: 'logos:nuxt-icon'},
         {text: 'Vuetify', icon: 'logos:vuetifyjs'},
-        {text: 'Firebase', icon: 'logos:firebase'},
+    ]
+
+    const secondarySkills = [
+        {text: 'React', icon: 'logos:react'},
+        {text: 'Next', icon: 'logos:nextjs-icon'},
+        {text: 'MongoDB', icon: 'logos:mongodb-icon'},
+        {text: 'Firebase', icon: 'logos:firebase'}, 
         {text: 'Laravel', icon: 'logos:laravel'},
         {text: 'Tailwind', icon: 'logos:tailwindcss-icon'},
         {text: 'Boostrap', icon: 'logos:bootstrap'},
         {text: 'Github', icon: 'logos:github-icon'},
         {text: 'Git', icon: 'logos:git-icon'},
-    ])
+    ]
 </script>
 
 <style scoped>

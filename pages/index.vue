@@ -4,6 +4,7 @@
         <About id="about"></About>
         <Skills id="skills"></Skills>
         <Project id="projects"></Project>
+      
         <Contact id="contact"></Contact>
         <UNotifications color="blue"/>
     </div>
