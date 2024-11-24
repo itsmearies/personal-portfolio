@@ -8,7 +8,6 @@
                 <div class="text-center lg:text-start" data-aos="fade-right" ata-aos-easing="linear" data-aos-duration="1000">
                     <div class="space-y-7">
                         <div class="font-bold text-6xl">{{ info.title }}</div>
-                        <!-- <div class="text-4xl capitalize font-bold text-color">{{ info.subTitle }}</div> -->
                     </div>
                     <div class="mt-10">
                         <div class="leading-loose text-lg text-justify">
