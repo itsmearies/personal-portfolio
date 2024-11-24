@@ -2,7 +2,7 @@
     <div>
         <div class="section" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-easing="linear" data-aos-duration="1000">
             <div class="text-4xl font-bold text-center">Projects</div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-16">
                 <div v-for="(project, index) in projects" :key="index">
                     <div class="card shadow-lg rounded-md dark:bg-gray-950">
                         <div class="flex flex-col gap-5">

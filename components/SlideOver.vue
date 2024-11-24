@@ -1,6 +1,6 @@
 <template>
   <div>
-    <UButton class="md:hidden" color="gray" variant="ghost" @click="isOpen = true">
+    <UButton class="lg:hidden" color="gray" variant="ghost" @click="isOpen = true">
       <UIcon name="heroicons:list-bullet" class="icon-size"/>
     </UButton>
     

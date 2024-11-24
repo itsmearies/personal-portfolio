@@ -1,13 +1,13 @@
 <template>
     <div class="bg-[url('@/assets/images/bubble.svg')] bg-no-repeat bg-cover">
         <div class="section">
-            <div class="grid md:grid-cols-2 gap-16 py-[2rem] md:py-[4.5rem]">
-                <div class="typography flex flex-col justify-center items-center md:items-start gap-3 
+            <div class="grid lg:grid-cols-2 gap-16 py-[2rem] lg:py-[4.5rem]">
+                <div class="typography flex flex-col justify-center items-center lg:items-start gap-3 
                     order-2 text-center md:text-start" 
                     data-aos="fade-up" ata-aos-easing="linear"
                 >
-                    <div class="title font-bold text-6xl">Hi, I'm Jomel Malvar</div>
-                    <div class="text-lg">
+                    <div class="title font-bold text-7xl">I'm Jomel Malvar</div>
+                    <div class="text-2xl">
                         Let's continue our journey together and bring the experience to success.
                     </div>
                     <div class="social-links mt-5">
@@ -27,7 +27,7 @@
                         </NuxtLink>
                     </div>   
                 </div>
-                <div class="avatar flex justify-center md:justify-end order-1 md:order-2">
+                <div class="avatar flex justify-center lg:justify-end order-1 lg:order-2">
                     <img :src=avatar alt="avatar" class="rounded-full max-w-100 md:max-w-[600px]" data-aos="flip-left" ata-aos-easing="linear"/>
                 </div>
             </div>
