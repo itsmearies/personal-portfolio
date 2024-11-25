@@ -15,7 +15,7 @@
                         </div>
                     </div>  
                     <div class="mt-10">
-                        <UDivider icon="heroicons:phone" />
+                        <UDivider icon="heroicons:information-circle" />
                         <ul class="flex flex-col gap-4 mt-5">
                             <li v-for="(link, index) in sample" :key="index" class="flex items-center gap-2 text-md">
                                 <NuxtLink to="">

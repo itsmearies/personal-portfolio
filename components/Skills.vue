@@ -1,7 +1,8 @@
 <template>
-    <div class="section pt-0">
+    <div class="section">
         <div>
-            <div class="lg:px-[10rem]">
+            <div class="text-4xl font-bold text-center">Skills</div>
+            <div class="lg:px-[10rem] mt-16">
                 <ul class="flex flex-col gap-[5rem]">
                     <NuxtMarquee direction="right" speed=30>
                         <li class="mx-7" v-for="(skill, index) in primarySkills" :key="index">
