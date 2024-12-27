@@ -5,7 +5,7 @@
                 <div data-aos="fade-left" ata-aos-easing="linear" data-aos-duration="1000">
                     <img :src=info.image class="max-w-100" />
                 </div>
-                <div class="text-center lg:text-start" data-aos="fade-right" ata-aos-easing="linear" data-aos-duration="1000">
+                <div class="text-center lg:text-start flex flex-col justify-center" data-aos="fade-right" ata-aos-easing="linear" data-aos-duration="1000">
                     <div class="space-y-7">
                         <div class="font-bold text-6xl">{{ info.title }}</div>
                     </div>
@@ -14,19 +14,6 @@
                             {{ info.text }}
                         </div>
                     </div>  
-                    <div class="mt-10">
-                        <UDivider icon="heroicons:information-circle" />
-                        <ul class="flex flex-col gap-4 mt-5">
-                            <li v-for="(link, index) in sample" :key="index" class="flex items-center gap-2 text-md">
-                                <NuxtLink to="">
-                                    <div class="flex items-center gap-5">
-                                        <UAvatar :icon="link.icon" size="md" class="dark:bg-gray-950" />
-                                        {{ link.label }}
-                                    </div>
-                                </NuxtLink> 
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div> 
         </div>
@@ -40,25 +27,9 @@
         {
             image: image,
             title: 'About Me',
-            text: `Hello!, I am a recent graduate with a Bachelor of Science in Information Technology, passionate in web development.
-                    I love building a responsive, functional, and modern websites that deliver an excellent user experience. 
-                    I like to learn new technologies and continuously to develop my skills.`            
-        }
-    ];
-
-    const sample = [
-        {
-            label: 'Imus, Cavite, Philippines',
-            icon: 'heroicons:map-pin',
-            to: '/'
-        }, 
-        {
-            label: 'jomelmalvar522@gmail.com',
-            icon: 'heroicons:envelope'
-        }, 
-        {
-            label: '+63 921 427 2171',
-            icon: 'heroicons:phone'
+            text: `I am a recent graduate with a Bachelor of Science in Information Technology.
+                    I love building a responsive, functional, and modern website that deliver an excellent user experience while continuesly learning 
+                    new technologies to develop my skills.`            
         }
     ];
 </script>
