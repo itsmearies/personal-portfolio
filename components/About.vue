@@ -23,13 +23,12 @@
 <script setup>
     import image from './assets/images/about.svg';
 
-    const about = [
+    const about = [ 
         {
             image: image,
             title: 'About Me',
-            text: `I am a recent graduate with a Bachelor of Science in Information Technology.
-                    I love building a responsive, functional, and modern website that deliver an excellent user experience while continuesly learning 
-                    new technologies to develop my skills.`            
+            text: `I am a recent graduate with a Bachelor of Science in Information Technology, passionate about creating responsive, functional, and modern websites that deliver exceptional user experiences. I am dedicated to continuously learning new technologies 
+            to refine my skills and stay at the forefront of web development.`            
         }
     ];
 </script>

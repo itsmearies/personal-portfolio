@@ -19,7 +19,7 @@
                 </div>
               
                 <div>
-                    <div class="text-xl font-bold">Nav Links</div>
+                    <div class="text-xl font-bold">Quick Links</div>
                     <ul class="flex flex-col gap-2 mt-2">
                         <li v-for="(link, index) in navLinks" :key="index" class="flex items-center gap-2 text-md capitalize">  
                             <ULink :to="`#${link.label}`">
@@ -41,7 +41,7 @@
                             </li>
                         </ul>
                     </div>
-                    Copyright&#169;{{ new Date().getFullYear() }}; Designed By Me
+                    Copyright &#169; {{ new Date().getFullYear() }}; Designed By Me
                 </div>
             </div>  
         </div>

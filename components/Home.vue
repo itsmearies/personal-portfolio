@@ -6,9 +6,9 @@
                     order-2 text-center md:text-start" 
                     data-aos="fade-up" ata-aos-easing="linear"
                 >
-                    <div class="title font-bold text-7xl">I'm Jomel Malvar</div>
+                    <div class="title font-bold text-7xl">Hi! I'm Jomel Malvar</div>
                     <div class="text-2xl">
-                        Let's continue our journey together and bring the experience to success!
+                       Aspiring Web Developer
                     </div>
                     <div class="social-links mt-5">
                         <ul class="flex gap-6">
