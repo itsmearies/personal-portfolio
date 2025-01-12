@@ -3,15 +3,15 @@
         <div>
             <div class="text-4xl font-bold text-center">Skills</div>
             <div class="lg:px-[10rem] mt-16">
-                <ul class="flex flex-col gap-[5rem]">
+                <ul class="flex flex-col gap-[3rem]">
                     <NuxtMarquee direction="right" speed=30>
                         <li class="mx-7" v-for="(skill, index) in primarySkills" :key="index">
-                            <UIcon :name="skill.icon" class="text-[4rem]"/>
+                            <UIcon :name="skill.icon" class="text-[3.5rem]"/>
                         </li>
                     </NuxtMarquee>
                     <NuxtMarquee direction="left" speed=30>
                         <li class="mx-7" v-for="(skill, index) in secondarySkills" :key="index">
-                            <UIcon :name="skill.icon" class="text-[4rem]"/>
+                            <UIcon :name="skill.icon" class="text-[3.5rem]"/>
                         </li>
                     </NuxtMarquee>
                 </ul>
